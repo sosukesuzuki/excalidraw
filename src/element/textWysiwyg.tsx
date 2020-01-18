@@ -42,7 +42,11 @@ export function textWysiwyg({
     minHeight: "1em"
   });
 
-  editable.onkeydown = ev => {
+  editable.addEventListener("compositionend", ev => {
+    ev.preventDefault();
+  });
+
+  editable.onkeypress = ev => {
     if (ev.key === KEYS.ESCAPE) {
       ev.preventDefault();
       if (initText) {
@@ -81,7 +85,7 @@ export function textWysiwyg({
 
   function cleanup() {
     editable.onblur = null;
-    editable.onkeydown = null;
+    editable.onkeypress = null;
     editable.onpaste = null;
     window.removeEventListener("wheel", stopEvent, true);
     document.body.removeChild(editable);
