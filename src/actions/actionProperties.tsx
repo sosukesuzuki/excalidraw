@@ -26,7 +26,7 @@ const changeProperty = (
   });
 };
 
-const getFormValue = function<T>(
+const getFormValue = function <T>(
   elements: readonly ExcalidrawElement[],
   appState: AppState,
   getAttribute: (element: ExcalidrawElement) => T,

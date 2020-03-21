@@ -68,7 +68,7 @@ export function t(path: string, replacement?: { [key: string]: string }) {
 const languageDetector = new LanguageDetector();
 languageDetector.init({
   languageUtils: {
-    formatLanguageCode: function(lng: string) {
+    formatLanguageCode: function (lng: string) {
       return lng;
     },
     isWhitelisted: () => true,

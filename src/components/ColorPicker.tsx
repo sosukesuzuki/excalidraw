@@ -18,7 +18,7 @@ const keyBindings = [
   ["a", "s", "d", "f", "g"],
 ].flat();
 
-const Picker = function({
+const Picker = function ({
   colors,
   color,
   onChange,
@@ -145,9 +145,7 @@ const Picker = function({
           >
             {_color === "transparent" ? (
               <div className="color-picker-transparent"></div>
-            ) : (
-              undefined
-            )}
+            ) : undefined}
             <span className="color-picker-keybinding">{keyBindings[i]}</span>
           </button>
         ))}
